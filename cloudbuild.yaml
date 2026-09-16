@@ -3,6 +3,9 @@ substitutions:
   _SERVICE: motr-tech
   _IMAGE: us-south1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/motr-technologies-inc-motr.tech/motr-tech
 
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 steps:
   - name: gcr.io/cloud-builders/docker
     args:
