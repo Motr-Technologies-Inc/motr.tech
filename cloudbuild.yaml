@@ -1,7 +1,6 @@
 substitutions:
   _REGION: us-south1
   _SERVICE: motr-tech
-  _IMAGE: us-south1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/motr-technologies-inc-motr.tech/motr-tech
 
 options:
   logging: CLOUD_LOGGING_ONLY
@@ -11,13 +10,13 @@ steps:
     args:
       - build
       - -t
-      - $_IMAGE:$COMMIT_SHA
+      - us-south1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/motr-technologies-inc-motr.tech/motr-tech:$COMMIT_SHA
       - .
 
   - name: gcr.io/cloud-builders/docker
     args:
       - push
-      - $_IMAGE:$COMMIT_SHA
+      - us-south1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/motr-technologies-inc-motr.tech/motr-tech:$COMMIT_SHA
 
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
     entrypoint: gcloud
@@ -25,10 +24,10 @@ steps:
       - run
       - deploy
       - $_SERVICE
-      - --image=$_IMAGE:$COMMIT_SHA
+      - --image=us-south1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/motr-technologies-inc-motr.tech/motr-tech:$COMMIT_SHA
       - --region=$_REGION
       - --platform=managed
       - --allow-unauthenticated
 
 images:
-  - $_IMAGE:$COMMIT_SHA
+  - us-south1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/motr-technologies-inc-motr.tech/motr-tech:$COMMIT_SHA
