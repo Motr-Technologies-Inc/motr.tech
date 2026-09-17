@@ -105,7 +105,7 @@ body {
 }
 
 .brand-lockup {
-	width: 27rem;
+	width: min(100%, 21.6rem);
 	max-width: 100%;
 	margin-bottom: clamp(2.4rem, 7vh, 5rem);
 	padding: 0;
@@ -212,11 +212,6 @@ h1 em {
 		padding: 3rem 0;
 	}
 
-	.brand-lockup {
-		width: min(88vw, 19rem);
-		margin-bottom: 3.5rem;
-	}
-
 	h1 {
 		font-size: clamp(4.8rem, 23vw, 7.5rem);
 	}
@@ -231,6 +226,13 @@ h1 em {
 
 	.footer-mark {
 		display: none;
+	}
+}
+
+@media (max-width: 600px) and (pointer: coarse) {
+	.brand-lockup {
+		width: min(88vw, 19rem);
+		margin-bottom: 3.5rem;
 	}
 }
 
