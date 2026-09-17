@@ -105,9 +105,10 @@ body {
 }
 
 .brand-lockup {
-	width: var(--hero-lockup-width);
+	width: 27rem;
+	max-width: 100%;
 	margin-bottom: clamp(2.4rem, 7vh, 5rem);
-	padding: 0.75rem 1.1rem;
+	padding: 0;
 	background: rgba(255, 255, 255, 0.95);
 	box-shadow: 0 1rem 3rem rgba(4, 12, 20, 0.22);
 }
@@ -212,7 +213,7 @@ h1 em {
 	}
 
 	.brand-lockup {
-		width: min(78vw, 16rem);
+		width: min(88vw, 19rem);
 		margin-bottom: 3.5rem;
 	}
 
@@ -245,7 +246,6 @@ h1 em {
 	}
 
 	.brand-lockup {
-		width: 13rem;
 		margin-bottom: 1rem;
 	}
 
