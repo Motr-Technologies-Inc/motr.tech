@@ -4,6 +4,7 @@
 	--copper: #b66d3b;
 	--paper: #f3f4f1;
 	--line: rgba(255, 255, 255, 0.34);
+	--hero-lockup-width: min(100%, 23rem);
 }
 
 * {
@@ -104,7 +105,7 @@ body {
 }
 
 .brand-lockup {
-	width: min(100%, 19rem);
+	width: var(--hero-lockup-width);
 	margin-bottom: clamp(2.4rem, 7vh, 5rem);
 	padding: 0.75rem 1.1rem;
 	background: rgba(255, 255, 255, 0.95);
@@ -119,6 +120,7 @@ body {
 }
 
 .eyebrow {
+	width: var(--hero-lockup-width);
 	margin: 0 0 0.8rem;
 	color: #e2a06c;
 	font-size: 0.78rem;
@@ -128,7 +130,7 @@ body {
 }
 
 h1 {
-	max-width: 7ch;
+	width: var(--hero-lockup-width);
 	margin: 0;
 	color: #fff;
 	font-family: "Barlow Condensed", Impact, sans-serif;
